@@ -1,0 +1,79 @@
+@use "../utilities/colors" as Color;
+
+.btn {
+	border: none;
+	padding: 12px 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+
+	// @each $color, $value in $theme-colors {
+	// 	.btn--#{$color} {
+	// 		@include button-variant($value);
+	// 	}
+	// }
+
+	&--primary {
+		background-color: Color.$primary;
+		color: Color.$primaryFore;
+		&:hover {
+			background-color: Color.$primaryHover;
+		}
+	}
+
+	&--secondary {
+		background-color: Color.$secondary;
+		color: Color.$secondaryFore;
+		&:hover {
+			background-color: Color.$secondaryHover;
+		}
+	}
+
+	&--success {
+		background-color: Color.$success;
+		color: Color.$successFore;
+		&:hover {
+			background-color: Color.$successHover;
+		}
+	}
+
+	&--danger {
+		background-color: Color.$danger;
+		color: Color.$dangerFore;
+		&:hover {
+			background-color: Color.$dangerHover;
+		}
+	}
+
+	&--warning {
+		background-color: Color.$warning;
+		color: Color.$warningFore;
+		&:hover {
+			background-color: Color.$warningHover;
+		}
+	}
+
+	&--info {
+		background-color: Color.$info;
+		color: Color.$infoFore;
+		&:hover {
+			background-color: Color.$infoHover;
+		}
+	}
+
+	&--light {
+		background-color: Color.$light;
+		color: Color.$lightFore;
+		&:hover {
+			background-color: Color.$lightHover;
+		}
+	}
+
+	&--dark {
+		background-color: Color.$dark;
+		color: Color.$darkFore;
+		&:hover {
+			background-color: Color.$dangerHover;
+		}
+	}
+}
