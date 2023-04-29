@@ -1,4 +1,4 @@
-@use "../utilities/colors" as Color;
+@use "../utilities/colors" as *;
 
 .btn {
 	border: none;
@@ -7,73 +7,14 @@
 	cursor: pointer;
 	transition: all 0.15s ease-in-out;
 
-	// @each $color, $value in $theme-colors {
-	// 	.btn--#{$color} {
-	// 		@include button-variant($value);
-	// 	}
-	// }
-
-	&--primary {
-		background-color: Color.$primary;
-		color: Color.$primaryFore;
-		&:hover {
-			background-color: Color.$primaryHover;
-		}
-	}
-
-	&--secondary {
-		background-color: Color.$secondary;
-		color: Color.$secondaryFore;
-		&:hover {
-			background-color: Color.$secondaryHover;
-		}
-	}
-
-	&--success {
-		background-color: Color.$success;
-		color: Color.$successFore;
-		&:hover {
-			background-color: Color.$successHover;
-		}
-	}
-
-	&--danger {
-		background-color: Color.$danger;
-		color: Color.$dangerFore;
-		&:hover {
-			background-color: Color.$dangerHover;
-		}
-	}
-
-	&--warning {
-		background-color: Color.$warning;
-		color: Color.$warningFore;
-		&:hover {
-			background-color: Color.$warningHover;
-		}
-	}
-
-	&--info {
-		background-color: Color.$info;
-		color: Color.$infoFore;
-		&:hover {
-			background-color: Color.$infoHover;
-		}
-	}
-
-	&--light {
-		background-color: Color.$light;
-		color: Color.$lightFore;
-		&:hover {
-			background-color: Color.$lightHover;
-		}
-	}
-
-	&--dark {
-		background-color: Color.$dark;
-		color: Color.$darkFore;
-		&:hover {
-			background-color: Color.$dangerHover;
+	//Ex: btn--primary => &--primary
+	@each $name, $colorList in $colors {
+		&--#{$name} {
+			background-color: nth($colorList, 1);
+			&:hover {
+				background-color: nth($colorList, 2);
+			}
+			color: nth($colorList, 3);
 		}
 	}
 }
