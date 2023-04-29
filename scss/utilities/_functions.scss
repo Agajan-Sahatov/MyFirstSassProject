@@ -1,0 +1,10 @@
+@use "sass:math";
+
+@function getRem($px) {
+	@if math.unit($px) != "px" and not math.is-unitless($px) {
+		@error "Only pixel unit is allowed!";
+	}
+
+	$value: math.div($px, 16);
+	@return $value + rem;
+}

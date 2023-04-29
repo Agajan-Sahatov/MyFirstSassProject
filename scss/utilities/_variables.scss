@@ -1,3 +1,4 @@
+@use "./functions" as *;
 $colors: (
 	primary: (
 		#0d6efd,
@@ -42,10 +43,10 @@ $colors: (
 );
 
 $breakpoints: (
-	xs: 400px,
-	sm: 576px,
-	md: 768px,
-	lg: 1024px,
-	xl: 1200px,
-	xxl: 1400px,
+	xs: getRem(400px),
+	sm: getRem(576px),
+	md: getRem(768px),
+	lg: getRem(1024px),
+	xl: getRem(1200px),
+	xxl: getRem(1400px),
 );

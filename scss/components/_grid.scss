@@ -1,4 +1,4 @@
-@use "../utilities/variables" as *;
+@use "../utilities" as *;
 @use "sass:map";
 
 .grid {
@@ -12,9 +12,14 @@
 		padding: 20px 40px 50px;
 	}
 
+	h2 {
+		text-align: center;
+	}
+
 	@media (min-width: map.get($breakpoints, md)) {
 		padding-top: 40px;
 		grid-template-columns: 1.8fr 1.2fr;
+		padding-bottom: 40px;
 
 		&__main {
 			padding: 0 40px;
