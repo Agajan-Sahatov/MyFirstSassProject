@@ -1,8 +1,9 @@
-@use "../utilities/colors" as *;
+@use "../utilities/variables" as *;
 
 .btn {
 	border: none;
 	padding: 12px 16px;
+	margin: 4px 0;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: all 0.15s ease-in-out;

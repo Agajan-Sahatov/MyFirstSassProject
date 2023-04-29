@@ -1,3 +1,27 @@
+@use "../utilities/variables" as *;
+@use "sass:map";
+
 .grid {
 	display: grid;
+	grid-template-columns: 1fr;
+	&__main {
+		padding: 20px 40px;
+	}
+
+	&__aside {
+		padding: 20px 40px 50px;
+	}
+
+	@media (min-width: map.get($breakpoints, md)) {
+		padding-top: 40px;
+		grid-template-columns: 1.8fr 1.2fr;
+
+		&__main {
+			padding: 0 40px;
+		}
+
+		&__aside {
+			padding: 0 40px;
+		}
+	}
 }
