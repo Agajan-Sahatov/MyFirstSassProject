@@ -1,43 +1,45 @@
 @use "./functions" as *;
+
 $colors: (
 	primary: (
 		#0d6efd,
-		#0c59cc,
-		#fff,
+		dark,
 	),
 	secondary: (
 		#6c757e,
-		#565b61,
-		#fff,
+		dark,
 	),
 	success: (
 		#157c4c,
-		#10643d,
-		#fff,
+		dark,
 	),
 	danger: (
 		#dc3546,
-		#a82633,
-		#fff,
+		dark,
 	),
 	warning: (
 		#fec107,
-		#fdd55e,
-		#000,
+		light,
 	),
 	info: (
 		#0dcaf0,
-		#5dddf7,
-		#000,
+		light,
 	),
 	light: (
 		#f8f9fb,
-		#cbcdd1,
-		#000,
+		light,
 	),
 	dark: (
 		#212429,
-		#373b42,
-		#fff,
+		dark,
 	),
+);
+
+$breakpoints: (
+	xs: getRem(400),
+	sm: getRem(576),
+	md: getRem(768),
+	lg: getRem(1024),
+	xl: getRem(1200),
+	xxl: getRem(1400),
 );

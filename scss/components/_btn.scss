@@ -1,4 +1,4 @@
-@use "../utilities/colors" as *;
+@use "../utilities" as *;
 
 .btn {
 	border: none;
@@ -9,13 +9,16 @@
 	transition: all 0.15s ease-in-out;
 
 	//Ex: btn--primary => &--primary
-	@each $name, $colorList in $colors {
+	@each $name, $color in $colors {
 		&--#{$name} {
-			background-color: nth($colorList, 1);
+			$currentColor: nth($color, 1);
+			$currentLightness: nth($color, 2);
+
+			background-color: $currentColor;
+			color: getForeColor($currentColor, $currentLightness);
 			&:hover {
-				background-color: nth($colorList, 2);
+				background-color: getHoverColor($currentColor, $currentLightness);
 			}
-			color: nth($colorList, 3);
 		}
 	}
 }
