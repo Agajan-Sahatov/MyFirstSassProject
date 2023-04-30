@@ -41,12 +41,3 @@ $colors: (
 		#fff,
 	),
 );
-
-$breakpoints: (
-	xs: getRem(400px),
-	sm: getRem(576px),
-	md: getRem(768px),
-	lg: getRem(1024px),
-	xl: getRem(1200px),
-	xxl: getRem(1400px),
-);

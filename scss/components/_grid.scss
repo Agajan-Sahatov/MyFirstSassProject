@@ -16,7 +16,7 @@
 		text-align: center;
 	}
 
-	@media (min-width: map.get($breakpoints, md)) {
+	@include breakpoint(md) {
 		padding-top: 40px;
 		grid-template-columns: 1.8fr 1.2fr;
 		padding-bottom: 40px;
